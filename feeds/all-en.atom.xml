@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>thewagner.net</title><link href="http://thewagner.net/" rel="alternate"></link><link href="http://thewagner.net/feeds/all-en.atom.xml" rel="self"></link><id>http://thewagner.net/</id><updated>2013-03-17T00:00:00+01:00</updated><entry><title>Cardboard Raspberry Pi case</title><link href="http://thewagner.net/cardboard-raspberry-pi-case-en.html" rel="alternate"></link><updated>2013-03-17T00:00:00+01:00</updated><author><name>Dávid</name></author><id>tag:thewagner.net,2013-03-17:cardboard-raspberry-pi-case-en.html</id><summary type="html">&lt;p&gt;I bought a &lt;a class="reference external" href="http://raspberrypi.org"&gt;Raspberry Pi&lt;/a&gt;.  No need to explain
+this since nowadays &lt;em&gt;everybody&lt;/em&gt; buys a Raspberry Pi.  Even if I don't use it,
+large part of its (not too high) price goes for charity, I figured.&lt;/p&gt;
+&lt;p&gt;I was reluctant to buy a casing for it in the shop, because I wanted to
+build it myself.  There are tons of interesting RPi case projects out there,
+but I found &lt;a class="reference external" href="http://www.judepullen.com/designmodelling/raspberry-pi-case/"&gt;Jude Pullen&lt;/a&gt;'s the most
+interesting.  I followed his instructions and the result is a very cool
+Raspberry Pi case out of cardboard.  In fact, I recycled the packaging of my
+new ThinkPad.&lt;/p&gt;
+&lt;img alt="|filename|/images/rpi-cardboard.jpg" class="align-center" src="http://thewagner.net/static/images/rpi-cardboard.jpg" style="width: 100%;" /&gt;
+&lt;p&gt;I didn't do the light-pipes.  I'm not sure if this is the Pi's final casing
+and I didn't want to glue anything onto the board itself.  In summary,
+working with cardboard is easy, fun and kept me away from the computer for
+some nights.  I may build a better version (with light pipes), or even
+something completely different in the future.&lt;/p&gt;
+</summary><category term="raspberrypi"></category></entry><entry><title>Brain transplant</title><link href="http://thewagner.net/brain-transplant-en.html" rel="alternate"></link><updated>2013-03-12T00:00:00+01:00</updated><author><name>Dávid</name></author><id>tag:thewagner.net,2013-03-12:brain-transplant-en.html</id><summary type="html">&lt;p&gt;In the lab we have a camera system composed of four cameras.  The system is
+controlled by two identical PCs, two cameras connected to each.  After a
+long break of operation, when we wanted to use the system again, the hard
+drive in one PC decided to quit science and went dead.  We replaced the poor
+fellow with a new drive and I wanted to transfer the system as it is from
+the &lt;tt class="docutils literal"&gt;healty&lt;/tt&gt; computer to the new drive of the &lt;tt class="docutils literal"&gt;braindead&lt;/tt&gt; system .
+Following the brain transplant procedure in its most realistic, bloody
+purity.&lt;/p&gt;
+&lt;p&gt;My idea is to run on &lt;tt class="docutils literal"&gt;healthy&lt;/tt&gt;:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+dd if=/dev/hda | ssh user&amp;#64;braindead sudo dd of=/dev/sda
+&lt;/pre&gt;
+&lt;p&gt;To this end I boot up &lt;tt class="docutils literal"&gt;brainded&lt;/tt&gt; (with the new drive in) from a &lt;a class="reference external" href="http://www.debian.org/CD/live/"&gt;Debian
+Live CD&lt;/a&gt;.  While setting up the network
+(IP address, DNS, etc.), it turns out that the network card needs some
+non-free firmware which are not on the Installer/Live CD.  This is a bit
+annoying but not the end of the world.  After some googling I learn that I
+need &lt;a class="reference external" href="http://packages.debian.org/squeeze/all/firmware-linux-nonfree/download"&gt;fimrware-linux-nonfree&lt;/a&gt;,
+so I download and put it on a USB stick and install (&lt;tt class="docutils literal"&gt;dpkg &lt;span class="pre"&gt;-i&lt;/span&gt;&lt;/tt&gt;) it on
+&lt;tt class="docutils literal"&gt;braindead&lt;/tt&gt;.  Now it has network connection and an SSH server running.&lt;/p&gt;
+&lt;p&gt;To prepare for the transplant I put &lt;tt class="docutils literal"&gt;healthy&lt;/tt&gt; in single user mode and
+mount the file system read-only (as root):&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+$ init 1
+$ mount / -o remount,ro
+&lt;/pre&gt;
+&lt;p&gt;Now everything is ready for the procedure.  I run &lt;tt class="docutils literal"&gt;dd&lt;/tt&gt; through SSH as
+described above.  It takes some time, but the transfer works fine.&lt;/p&gt;
+&lt;p&gt;On &lt;tt class="docutils literal"&gt;braindead&lt;/tt&gt;, still running the Live CD,  I mount the new disk and&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;change the host name in &lt;tt class="docutils literal"&gt;/etc/hostname&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;generate new host keys
+(&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;ssh-keygen&lt;/span&gt; &lt;span class="pre"&gt;-t&lt;/span&gt; rsa &lt;span class="pre"&gt;-f&lt;/span&gt; /etc/ssh/ssh_host_rsa_key&lt;/tt&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I reboot &lt;tt class="docutils literal"&gt;braindead&lt;/tt&gt; and voilá, it works!  Well almost... I experience
+some problem with the networking.  I quickly figure it out that the network
+card enumeration (eth0 eth1 swap thingy) is screwed, but it is easy to fix
+by editing &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;/etc/udev/rules.d/70-persistent-net.rules&lt;/span&gt;&lt;/tt&gt; and removing the
+lines that refer (by MAC address) to the network card which is in the other
+machine.&lt;/p&gt;
+</summary></entry><entry><title>Hello world</title><link href="http://thewagner.net/hello-world-en.html" rel="alternate"></link><updated>2013-03-06T00:00:00+01:00</updated><author><name>Dávid</name></author><id>tag:thewagner.net,2013-03-06:hello-world-en.html</id><summary type="html">&lt;p&gt;This is the first post.&lt;/p&gt;
+</summary><category term="test"></category></entry></feed>
