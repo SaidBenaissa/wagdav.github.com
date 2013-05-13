@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>thewagner.net</title><link href="http://thewagner.net/" rel="alternate"></link><link href="http://thewagner.net/feeds/tech.atom.xml" rel="self"></link><id>http://thewagner.net/</id><updated>2013-03-17T00:00:00+01:00</updated><entry><title>Cardboard Raspberry Pi case</title><link href="http://thewagner.net/cardboard-raspberry-pi-case-en.html" rel="alternate"></link><updated>2013-03-17T00:00:00+01:00</updated><author><name>Dávid</name></author><id>tag:thewagner.net,2013-03-17:cardboard-raspberry-pi-case-en.html</id><summary type="html">&lt;p&gt;I bought a &lt;a class="reference external" href="http://raspberrypi.org"&gt;Raspberry Pi&lt;/a&gt;.  No need to explain
+<feed xmlns="http://www.w3.org/2005/Atom"><title>thewagner.net</title><link href="http://thewagner.net/" rel="alternate"></link><link href="http://thewagner.net/feeds/tech.atom.xml" rel="self"></link><id>http://thewagner.net/</id><updated>2013-03-17T00:00:00+01:00</updated><entry><title>Cardboard Raspberry Pi case</title><link href="http://thewagner.net/blog/2013/03/17/cardboard-raspberry-pi-case/" rel="alternate"></link><updated>2013-03-17T00:00:00+01:00</updated><author><name>Dávid</name></author><id>tag:thewagner.net,2013-03-17:blog/2013/03/17/cardboard-raspberry-pi-case/</id><summary type="html">&lt;p&gt;I bought a &lt;a class="reference external" href="http://raspberrypi.org"&gt;Raspberry Pi&lt;/a&gt;.  No need to explain
 this since nowadays &lt;em&gt;everybody&lt;/em&gt; buys a Raspberry Pi.  Even if I don't use it,
 large part of its (not too high) price goes for charity, I figured.&lt;/p&gt;
 &lt;p&gt;I was reluctant to buy a casing for it in the shop, because I wanted to
@@ -14,7 +14,7 @@ and I didn't want to glue anything onto the board itself.  In summary,
 working with cardboard is easy, fun and kept me away from the computer for
 some nights.  I may build a better version (with light pipes), or even
 something completely different in the future.&lt;/p&gt;
-</summary><category term="raspberrypi"></category></entry><entry><title>Brain transplant</title><link href="http://thewagner.net/brain-transplant-en.html" rel="alternate"></link><updated>2013-03-12T00:00:00+01:00</updated><author><name>Dávid</name></author><id>tag:thewagner.net,2013-03-12:brain-transplant-en.html</id><summary type="html">&lt;p&gt;In the lab we have a camera system composed of four cameras.  The system is
+</summary><category term="raspberrypi"></category></entry><entry><title>Brain transplant</title><link href="http://thewagner.net/blog/2013/03/12/brain-transplant/" rel="alternate"></link><updated>2013-03-12T00:00:00+01:00</updated><author><name>Dávid</name></author><id>tag:thewagner.net,2013-03-12:blog/2013/03/12/brain-transplant/</id><summary type="html">&lt;p&gt;In the lab we have a camera system composed of four cameras.  The system is
 controlled by two identical PCs, two cameras connected to each.  After a
 long break of operation, when we wanted to use the system again, the hard
 drive in one PC decided to quit science and went dead.  We replaced the poor

@@ -83,7 +83,7 @@ közölték, hogy minden rendben és a dolgozatot fenntartások nélkül
 elfogadják.&lt;/p&gt;
 &lt;p&gt;Most már csak a diploma-átvétel és ünneplés (&lt;em&gt;meg néhány, az opponensek
 által javasolt korrekció&lt;/em&gt;) van hátra.&lt;/p&gt;
-</summary></entry><entry><title>Cardboard Raspberry Pi case</title><link href="http://thewagner.net/cardboard-raspberry-pi-case-en.html" rel="alternate"></link><updated>2013-03-17T00:00:00+01:00</updated><author><name>Dávid</name></author><id>tag:thewagner.net,2013-03-17:cardboard-raspberry-pi-case-en.html</id><summary type="html">&lt;p&gt;I bought a &lt;a class="reference external" href="http://raspberrypi.org"&gt;Raspberry Pi&lt;/a&gt;.  No need to explain
+</summary></entry><entry><title>Cardboard Raspberry Pi case</title><link href="http://thewagner.net/blog/2013/03/17/cardboard-raspberry-pi-case/" rel="alternate"></link><updated>2013-03-17T00:00:00+01:00</updated><author><name>Dávid</name></author><id>tag:thewagner.net,2013-03-17:blog/2013/03/17/cardboard-raspberry-pi-case/</id><summary type="html">&lt;p&gt;I bought a &lt;a class="reference external" href="http://raspberrypi.org"&gt;Raspberry Pi&lt;/a&gt;.  No need to explain
 this since nowadays &lt;em&gt;everybody&lt;/em&gt; buys a Raspberry Pi.  Even if I don't use it,
 large part of its (not too high) price goes for charity, I figured.&lt;/p&gt;
 &lt;p&gt;I was reluctant to buy a casing for it in the shop, because I wanted to
@@ -98,7 +98,7 @@ and I didn't want to glue anything onto the board itself.  In summary,
 working with cardboard is easy, fun and kept me away from the computer for
 some nights.  I may build a better version (with light pipes), or even
 something completely different in the future.&lt;/p&gt;
-</summary><category term="raspberrypi"></category></entry><entry><title>Brain transplant</title><link href="http://thewagner.net/brain-transplant-en.html" rel="alternate"></link><updated>2013-03-12T00:00:00+01:00</updated><author><name>Dávid</name></author><id>tag:thewagner.net,2013-03-12:brain-transplant-en.html</id><summary type="html">&lt;p&gt;In the lab we have a camera system composed of four cameras.  The system is
+</summary><category term="raspberrypi"></category></entry><entry><title>Brain transplant</title><link href="http://thewagner.net/blog/2013/03/12/brain-transplant/" rel="alternate"></link><updated>2013-03-12T00:00:00+01:00</updated><author><name>Dávid</name></author><id>tag:thewagner.net,2013-03-12:blog/2013/03/12/brain-transplant/</id><summary type="html">&lt;p&gt;In the lab we have a camera system composed of four cameras.  The system is
 controlled by two identical PCs, two cameras connected to each.  After a
 long break of operation, when we wanted to use the system again, the hard
 drive in one PC decided to quit science and went dead.  We replaced the poor
@@ -138,7 +138,7 @@ card enumeration (eth0 eth1 swap thingy) is screwed, but it is easy to fix
 by editing &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;/etc/udev/rules.d/70-persistent-net.rules&lt;/span&gt;&lt;/tt&gt; and removing the
 lines that refer (by MAC address) to the network card which is in the other
 machine.&lt;/p&gt;
-</summary></entry><entry><title>Montivipera wagneri</title><link href="http://thewagner.net/blog/2013/03/09/montivipera-wagneri/" rel="alternate"></link><updated>2013-03-09T00:00:00+01:00</updated><author><name>Dávid</name></author><id>tag:thewagner.net,2013-03-09:blog/2013/03/09/montivipera-wagneri/</id><summary type="html">&lt;p&gt;A hétvégén ellátogattunk a
+</summary></entry><entry><title>Montivipera wagneri</title><link href="http://thewagner.net/blog/2013/03/09/montivipera-wagneri-hu/" rel="alternate"></link><updated>2013-03-09T00:00:00+01:00</updated><author><name>Dávid</name></author><id>tag:thewagner.net,2013-03-09:blog/2013/03/09/montivipera-wagneri-hu/</id><summary type="html">&lt;p&gt;A hétvégén ellátogattunk a
 &lt;a class="reference external" href="http://www.vivariumlausanne.ch"&gt;Lausanne-i Vivarium&lt;/a&gt;-ba,
 ami egy állatkert főként egzotikus állatokkal: hüllőkkel, kétéltűekkel,
 pókokkal.  Az állatkert közelébe érve feltűnt az elhanyagolt környezet: az
@@ -197,6 +197,6 @@ neki, az emelkedőn már nem is próbáltam velük menni:  Szépen lassan, sajá
 tempóban 51 perc alatt értem fel a hágóra.&lt;/p&gt;
 &lt;p&gt;A legjobb kifogás amivel lassúságot magyarázom: még fáradt voltam az év első
 tekerésétől, a vasárnapi Lausanne-Montreux-Lausanne tóparti bohóckodásól.&lt;/p&gt;
-</summary><category term="tekerés"></category><category term="barátok"></category></entry><entry><title>Helló világ!</title><link href="http://thewagner.net/blog/2013/03/06/hello-world/" rel="alternate"></link><updated>2013-03-06T00:00:00+01:00</updated><author><name>Dávid</name></author><id>tag:thewagner.net,2013-03-06:blog/2013/03/06/hello-world/</id><summary type="html">&lt;p&gt;Ez az első teszt-bejegyzés.&lt;/p&gt;
-</summary><category term="test"></category></entry><entry><title>Hello world</title><link href="http://thewagner.net/hello-world-en.html" rel="alternate"></link><updated>2013-03-06T00:00:00+01:00</updated><author><name>Dávid</name></author><id>tag:thewagner.net,2013-03-06:hello-world-en.html</id><summary type="html">&lt;p&gt;This is the first post.&lt;/p&gt;
+</summary><category term="tekerés"></category><category term="barátok"></category></entry><entry><title>Hello world</title><link href="http://thewagner.net/blog/2013/03/06/hello-world/" rel="alternate"></link><updated>2013-03-06T00:00:00+01:00</updated><author><name>Dávid</name></author><id>tag:thewagner.net,2013-03-06:blog/2013/03/06/hello-world/</id><summary type="html">&lt;p&gt;This is the first post.&lt;/p&gt;
+</summary><category term="test"></category></entry><entry><title>Helló világ!</title><link href="http://thewagner.net/blog/2013/03/06/hello-world-hu/" rel="alternate"></link><updated>2013-03-06T00:00:00+01:00</updated><author><name>Dávid</name></author><id>tag:thewagner.net,2013-03-06:blog/2013/03/06/hello-world-hu/</id><summary type="html">&lt;p&gt;Ez az első teszt-bejegyzés.&lt;/p&gt;
 </summary><category term="test"></category></entry></feed>
