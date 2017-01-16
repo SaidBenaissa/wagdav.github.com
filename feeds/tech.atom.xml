@@ -1,5 +1,605 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>thewagner.net</title><link href="http://thewagner.net/" rel="alternate"></link><link href="http://thewagner.net/feeds/tech.atom.xml" rel="self"></link><id>http://thewagner.net/</id><updated>2013-05-15T00:00:00+02:00</updated><entry><title>Backup</title><link href="http://thewagner.net/blog/2013/05/15/backup/" rel="alternate"></link><updated>2013-05-15T00:00:00+02:00</updated><author><name>Dávid</name></author><id>tag:thewagner.net,2013-05-15:blog/2013/05/15/backup/</id><summary type="html">&lt;p&gt;At work, I stored all my important data on the lab's server which
+<feed xmlns="http://www.w3.org/2005/Atom"><title>The Wagner</title><link href="http://thewagner.net/" rel="alternate"></link><link href="http://thewagner.net/feeds/tech.atom.xml" rel="self"></link><id>http://thewagner.net/</id><updated>2016-07-20T00:00:00+02:00</updated><entry><title>Working habits</title><link href="http://thewagner.net/blog/2016/07/20/working-habits/" rel="alternate"></link><updated>2016-07-20T00:00:00+02:00</updated><author><name>Dávid</name></author><id>tag:thewagner.net,2016-07-20:blog/2016/07/20/working-habits/</id><summary type="html">&lt;p&gt;Inarguably &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Getting_Things_Done"&gt;David Allen's Getting Things Done&lt;/a&gt; had the great influence on me in developing an efficient working routine.  I have implemented my own system based on the book which works well for me most of the times.  Interestingly, GTD also taught me what I should &lt;em&gt;not&lt;/em&gt; do, and when things go less great I am noticing it in a short time:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;em&gt;Maybe this should be a whole project rather than a task?&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Is this item is really actionable?&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Was there any progress on this project recently?&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;...&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;When these questions arise, that's an indication that something needs to be changed.  Actually, most of the time they signal that some &lt;em&gt;thinking&lt;/em&gt; is needed before doing.&lt;/p&gt;
+&lt;p&gt;A key aspect of getting things done is a distraction free environment.  You can have the best task system ever, if the phone always rings, message notifications pop up, projects will never move forward.  I'd already recognized some points to improve in my working habits during my PhD, but I've been trying to shape my working environment more consciously since I started working in industry.&lt;/p&gt;
+&lt;p&gt;Here are some tools I use, techniques I implemented during the last years to support a good GTD work flow.  Most of the my work happens before the computer, so some of the points following are rather specific.&lt;/p&gt;
+&lt;p&gt;So here are my tips (for myself and you):&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Avoid distractions&lt;/li&gt;
+&lt;li&gt;Be asynchronous&lt;/li&gt;
+&lt;li&gt;Be responsive&lt;/li&gt;
+&lt;li&gt;Be distributed&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Let's see each point in detail.&lt;/p&gt;
+&lt;div class="section" id="avoid-distractions"&gt;
+&lt;h2&gt;Avoid distractions&lt;/h2&gt;
+&lt;p&gt;As stated earlier this is the most important point.  Distractions destroy productivity.&lt;/p&gt;
+&lt;div class="section" id="solid-black-desktop"&gt;
+&lt;h3&gt;Solid black desktop&lt;/h3&gt;
+&lt;p&gt;I used to tinker a lot with desktop widgets, I loved to put email notifications, clocks, cool backgrounds, nice window decorations, etc. on my desktop.  Now they are all gone, they're good for nothing but distractions.  My desktop has solid black color, no icons or anything at all.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="tiling-is-great"&gt;
+&lt;h3&gt;Tiling is great&lt;/h3&gt;
+&lt;p&gt;I'm using a tiling window manager (&lt;a class="reference external" href="http://xmonad.org"&gt;XMonad&lt;/a&gt;) which helps me to keep my applications organized.  I can only see the windows I need for what I'm working on.  My task bar is very small and only shows the most essential information.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="at-most-two-screens"&gt;
+&lt;h3&gt;At most two screens&lt;/h3&gt;
+&lt;p&gt;These days it's getting quite common to have a workstation with 2, 3 or even more screens.  I used to love screens a lot myself: the more the better, I thought.  It turns out that more screens just provide more space for distractions.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;em&gt;On this screen I will always keep my mail client open.&lt;/em&gt;&lt;/blockquote&gt;
+&lt;p&gt;I used to think.  Well, that's basically the same thing as having an annoying &amp;quot;You've got mail&amp;quot; notification on the desktop. Very annoying.&lt;/p&gt;
+&lt;p&gt;At work, my workstation has two screens, which is sufficient for me. Two screen provides reasonable arrangements for most of my work flows.  For example I can keep:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;code and documentation,&lt;/li&gt;
+&lt;li&gt;code and testing/debugging outputs,&lt;/li&gt;
+&lt;li&gt;browser and mail client&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;comfortably next to each other.  At home I use my laptop without external screens.  Thanks to my window manager I can switch almost instantaneously between virtual desktops, so I don't feel limited by it's relatively small, 12.5&amp;quot; screen.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="be-asynchronous"&gt;
+&lt;h2&gt;Be asynchronous&lt;/h2&gt;
+&lt;p&gt;Most of these ideas I learned from a series of blog posts explaining &lt;a class="reference external" href="https://zachholman.com/posts/how-github-works/"&gt;How GitHub Works&lt;/a&gt;.&lt;/p&gt;
+&lt;div class="section" id="prefer-email-to-phone"&gt;
+&lt;h3&gt;Prefer email to phone&lt;/h3&gt;
+&lt;p&gt;I prefer email to phone.  Receiving an email is not a distraction for me (see my comment on email notifications above) while a phone call is.  I can read an answer emails when I want, at the time and location where I feel like dealing with them.&lt;/p&gt;
+&lt;p&gt;Of course there are good reasons to call: the feedback is immediate, the discussion is more personal, conveying a message may be easier.  Still most of the people prefer to call because they fear that the other person might not read their emails or forget to answer.  Indeed, most of the people haven't got the slightest clue how to deal with their email.  The result is: emails get lost and forgotten so people think &lt;em&gt;Maybe I should just call instead...&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Calls and email can co-exist very naturally: calls can be organized over email.  Fix a time then discuss what's needed.  In fact, this way the phone call effectively turns into a meeting.  More on meetings in the next section.&lt;/p&gt;
+&lt;p&gt;Also email is only good as a communication tool if emails get answered, that is if the use of email comes with certain responsiveness.  I'll return to this point too later.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="prefer-documentation-to-meetings"&gt;
+&lt;h3&gt;Prefer documentation to meetings&lt;/h3&gt;
+&lt;p&gt;Just Google the terms &amp;quot;why meetings are bad&amp;quot; or &amp;quot;how to have good meetings&amp;quot; and you'll see my point.  The bottom line is that meetings are super expensive and very inefficient.&lt;/p&gt;
+&lt;p&gt;When I need to distribute knowledge I prefer to write documentation.  No, not that kind of documentation everybody hates writing.  I write a couple of lines on our company wiki or issue tracker, send a link around and ask people to read and ask questions or, even better, directly edit it if something is not clear.&lt;/p&gt;
+&lt;p&gt;Short essays, structured documents such as &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Request_for_Comments"&gt;RFCs&lt;/a&gt; or &lt;a class="reference external" href="https://www.python.org/dev/peps/"&gt;PEPs&lt;/a&gt; are great to convey a proposal or an idea.  These documents can be distributed, discussed and enhanced over email and no boring meetings are required.  They don't have to be super formal to be useful: the time spent on just gathering the words together helps to get out something solid out of the thinking process.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="be-responsive"&gt;
+&lt;h2&gt;Be responsive&lt;/h2&gt;
+&lt;p&gt;Asynchronous communication as mentioned before does not work without trust.  People will bother you on the phone (or through other synchronous channels) if they fear that you won't take the time to read your e-mails or review the documents you received.  Trust can be build by being &lt;em&gt;responsive&lt;/em&gt;.  If people develop trust in me and learn that they will get a response from me in time, it helps them to adapt their work flows to mine.&lt;/p&gt;
+&lt;p&gt;I try to answer my e-mails in a 'reasonable' time.  It depends on the context what this means:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;work related mails I try to answer within a day.&lt;/li&gt;
+&lt;li&gt;a mail from a friend a subject 'how is it going' will be answered in a couple of days.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;It happens that an email stays unanswered for a longer period of time, but most of the time it's because I didn't take the time to do it (which effectively means, because I was lazy) not because it was lost or forgotten.  I use the 'Inbox Zero' strategy (the term coined by Merlin Mann) to handle my mails using a super simple system named 'Trusted Trio' adopted from &lt;a class="reference external" href="http://lifehacker.com/182318/empty-your-inbox-with-the-trusted-trio"&gt;Lifehacker&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="be-distributed"&gt;
+&lt;h2&gt;Be distributed&lt;/h2&gt;
+&lt;p&gt;Stuff gets done at physically different locations.  For me these locations are: work, home and when I'm on the go.  For example, it can happen that in the office during the day I take some notes that I need in the evening at home to complete a certain task.  This means that my notes need to be distributed among all my places of work and they need to be accessible &lt;em&gt;without too much effort&lt;/em&gt;.  (In GTD terms: my reference material needs to be accessible from different contexts)&lt;/p&gt;
+&lt;dl class="docutils"&gt;
+&lt;dt&gt;More specifically:&lt;/dt&gt;
+&lt;dd&gt;&lt;ul class="first last simple"&gt;
+&lt;li&gt;it's a commonplace, but I can access my e-mails from anywhere.&lt;/li&gt;
+&lt;li&gt;I synchronize my browser bookmarks and history using Firefox, so I can save interesting sites for reading them later, somewhere else&lt;/li&gt;
+&lt;li&gt;my configuration files are stored &lt;a class="reference external" href="https://github.com/wagdav/rcfiles"&gt;on GitHub&lt;/a&gt; so I can access them from all my work stations&lt;/li&gt;
+&lt;li&gt;my notes are in a text file in a Dropbox folder&lt;/li&gt;
+&lt;li&gt;my task list is kept in sync by &lt;a class="reference external" href="https://taskwarrior.org"&gt;Taskwarrior&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;p&gt;I'd like to improve on my current setup to make my personal data, such as pictures, documents, etc. more accessible when I'm not home (only for myself in a secure manner
+of course).  Maybe I write a post about this some other time.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="summary"&gt;
+&lt;h2&gt;Summary&lt;/h2&gt;
+&lt;p&gt;I try to shape my working habits to get my stuff done in the most efficient manner.  I identified four principles (no distractions, asynchronous communication, responsiveness and distribution) which can help me to achieve this.&lt;/p&gt;
+&lt;/div&gt;
+</summary><category term="gtd"></category></entry><entry><title>Going mobile</title><link href="http://thewagner.net/blog/2015/08/20/going-mobile/" rel="alternate"></link><updated>2015-08-20T00:00:00+02:00</updated><author><name>Dávid</name></author><id>tag:thewagner.net,2015-08-20:blog/2015/08/20/going-mobile/</id><summary type="html">&lt;p&gt;This is an experimental post, sort of proof of principle, to see how comfortable it is to write blog posts from my mobile phone.  Maybe I should have called it &lt;a class="reference external" href="http://thewagner.net/blog/2013/03/06/hello-world/"&gt;hello world&lt;/a&gt; from Android.&lt;/p&gt;
+&lt;div class="section" id="ingredients"&gt;
+&lt;h2&gt;Ingredients&lt;/h2&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;&lt;strong&gt;Git based workflow&lt;/strong&gt; I write the posts and &lt;a class="reference external" href="http://thewagner.net/blog/2013/08/09/my-blogging-workflow-with-git/"&gt;generate the blog&lt;/a&gt; on my laptop (using GitHub pages).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Git client on my phone&lt;/strong&gt;. After a bit of research I quickly settled with &lt;a class="reference external" href="http://pocketgit.com"&gt;PocketGit&lt;/a&gt;. It is not for free, but costs only 1.79 CHF and, according to the reviews, this is the best Android client you can get.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;An editor&lt;/strong&gt;. Since on the desktop I use vim for everything I gave &lt;a class="reference external" href="https://github.com/momodalo/vimtouch"&gt;Vim Touch&lt;/a&gt; a shot, but was not convinced.  For now I installed the &lt;a class="reference external" href="http://getquoda.com"&gt;Quoda code editor&lt;/a&gt;. So far so good, we will see how I like it.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div class="section" id="setup"&gt;
+&lt;h2&gt;Setup&lt;/h2&gt;
+&lt;p&gt;There was really nothing unusual to do.  Only PocketGit only needed some additional configuration.  I generated an SSH key pair to be used by my phone to access the remote Git repositories.  The rest of the infrastructure was already in place.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="conclusion"&gt;
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;This first post entirely written on my Android phone is about to finish.  It took me only about an hour to configure everything and I am overall happy with this tool chain.&lt;/p&gt;
+&lt;p&gt;Typing on my small phone is a bit painful but I think I can get use to it (otherwise I have to buy a phablet or suchlike).  I will keep publishing the posts only from my laptop where I can comfortably spell check, polish and integrate the changes I made into the master branch. Also my &lt;a class="reference external" href="http://getpelican.com"&gt;blog generator&lt;/a&gt; does not run on Android, but this is not an issue at all.&lt;/p&gt;
+&lt;/div&gt;
+</summary></entry><entry><title>Code archeology</title><link href="http://thewagner.net/blog/2015/03/25/code-archeology/" rel="alternate"></link><updated>2015-03-25T00:00:00+01:00</updated><author><name>Dávid</name></author><id>tag:thewagner.net,2015-03-25:blog/2015/03/25/code-archeology/</id><summary type="html">&lt;p&gt;Back in 2004 a friend of mine was building a telescope and I wanted it to have
+an automated control system, where the user can select a star she
+wants to see and the system would automatically orient the telescope towards the
+appropriate celestial coordinates.  I called this ambitious plan: &amp;quot;Project Starfinder&amp;quot;.  The plan was that he builds the telescope and I write the software.  We both did our job separately, but we never got around to put our works together.&lt;/p&gt;
+&lt;p&gt;Though Project Starfinder failed, the motor controller I built was quite a success.  The other day I was browsing through my old backups and I stumbled upon the code I wrote 11 years ago.  &lt;tt class="docutils literal"&gt;motorc&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;motord&lt;/tt&gt; were the client and the server component, respectively, of my stepper motor controller.&lt;/p&gt;
+&lt;div class="section" id="daemon"&gt;
+&lt;h2&gt;Daemon&lt;/h2&gt;
+&lt;p&gt;The &lt;tt class="docutils literal"&gt;motord&lt;/tt&gt; daemon was responsible to receive messages from the connected clients and translate them to instructions to be written to the parallel port.  I also built a circuit that could drive four motors connected to the PCs parallel port.  The daemon needed to run with root privileges.&lt;/p&gt;
+&lt;p&gt;The daemon was accepting connections on a PF_LOCAL socket.  For each incoming connection the daemon forked off a child process to handle the one to one communication with the connected client.  I had read somewhere that Apache worked this way and I remember being quiet very to learn about &lt;tt class="docutils literal"&gt;fork()&lt;/tt&gt;.&lt;/p&gt;
+&lt;p&gt;I used &lt;tt class="docutils literal"&gt;select&lt;/tt&gt; on an &lt;tt class="docutils literal"&gt;fd_set&lt;/tt&gt; to process the incoming messages.  This caused me a lot of headaches.  I didn't really understand what was going on with these file descriptors.  Everything about them seemed magical.  I probably copied the respective code from a tutorial or somewhere.&lt;/p&gt;
+&lt;p&gt;Anyhow, the messages arrived from the socket and they were processed in a large switch-case:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;pid&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;fork&lt;/span&gt; &lt;span class="p"&gt;();&lt;/span&gt; &lt;span class="cm"&gt;/* forking off */&lt;/span&gt;
+
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pid&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="cm"&gt;/* if we are a child process */&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+   &lt;span class="n"&gt;select&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;FD_SETSIZE&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;set&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;NULL&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;NULL&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;timeout&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+   &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+   &lt;span class="p"&gt;{&lt;/span&gt;
+      &lt;span class="n"&gt;read&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;client&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="k"&gt;sizeof&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;t_motor_command&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
+      &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;debug&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+         &lt;span class="n"&gt;syslog&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;LOG_DAEMON&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;LOG_DEBUG&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                 &lt;span class="s"&gt;&amp;quot;Instruction: 0x%x, Address: 0x%x&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                 &lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;inst&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                 &lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;addr&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+
+      &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;inst&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;BYE&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+         &lt;span class="k"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="cm"&gt;/* TODO: a safer solution needed */&lt;/span&gt;
+
+      &lt;span class="k"&gt;switch&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;inst&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+      &lt;span class="p"&gt;{&lt;/span&gt;
+         &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="nl"&gt;MOTOREN&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="cm"&gt;/* Motor enable */&lt;/span&gt;
+             &lt;span class="n"&gt;motors&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;addr&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;enabled&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+             &lt;span class="k"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+         &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="nl"&gt;MOTORDIS&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="cm"&gt;/* Motor disable */&lt;/span&gt;
+             &lt;span class="n"&gt;motors&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;addr&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;enabled&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+             &lt;span class="k"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+         &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="nl"&gt;MOTORR&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="cm"&gt;/* Direction right */&lt;/span&gt;
+             &lt;span class="n"&gt;motors&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;addr&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;direction&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+             &lt;span class="k"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+         &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="nl"&gt;MOTORL&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="cm"&gt;/* Direction left */&lt;/span&gt;
+             &lt;span class="n"&gt;motors&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;addr&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;direction&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+             &lt;span class="k"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+         &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="nl"&gt;MOTORCLR&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;     &lt;span class="cm"&gt;/* clear the position */&lt;/span&gt;
+             &lt;span class="n"&gt;motors&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;addr&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;position&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+             &lt;span class="k"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+         &lt;span class="cm"&gt;/* ... */&lt;/span&gt;
+       &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This is the code from the source file almost literally.  I used 8 spaces for indentation and apparently I didn't care about lines longer than 80 characters back then.&lt;/p&gt;
+&lt;p&gt;I developed a simple binary protocol to communicate over the socket.  The commands were represented by &lt;tt class="docutils literal"&gt;t_motor_command&lt;/tt&gt; data structure:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;typedef&lt;/span&gt; &lt;span class="k"&gt;struct&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+     &lt;span class="n"&gt;WORD&lt;/span&gt; &lt;span class="n"&gt;inst&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;  &lt;span class="cm"&gt;/* instruction byte*/&lt;/span&gt;
+     &lt;span class="n"&gt;WORD&lt;/span&gt; &lt;span class="n"&gt;addr&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;  &lt;span class="cm"&gt;/* motor address   */&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="n"&gt;t_motor_command&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Pretty standard stuff.&lt;/p&gt;
+&lt;p&gt;The motor daemon also had the following features:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;read and parsed a configuration file&lt;/li&gt;
+&lt;li&gt;supported arbitrary numbers of motors. In fact the motor objects were stored in a linked list.&lt;/li&gt;
+&lt;li&gt;wrote log messages to the syslog&lt;/li&gt;
+&lt;li&gt;changes in the motor position were made available to all clients&lt;/li&gt;
+&lt;li&gt;handled SIGTERM and SIGCHILD signals and made a clean exit&lt;/li&gt;
+&lt;li&gt;it was GPL licensed&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I didn't know how to use &lt;tt class="docutils literal"&gt;valgrind&lt;/tt&gt; or &lt;tt class="docutils literal"&gt;gdb&lt;/tt&gt; back then, so probably it leaked memory :-).&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="graphical-client"&gt;
+&lt;h2&gt;Graphical client&lt;/h2&gt;
+&lt;p&gt;My memories about development of the client application are more vague: it was much faster to develop it, and also it is much simpler program than the daemon.  I used Glade to design a GTK interface (with GTK 1.2).  I tried to compile the project in order to make some screenshots of the interface, but I failed.  The project depends on old libraries, moreover the newer version of Glade is having troubles reading the old interface files.&lt;/p&gt;
+&lt;p&gt;Anyway the interface was quite simple: it had four knobs for the four motors.  As the user turned the knobs the motors turned.  Very exciting!  If you opened multiple clients the knobs were synchronized (there was no position feedback from the motors).&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="summary"&gt;
+&lt;h2&gt;Summary&lt;/h2&gt;
+&lt;p&gt;Reading through the code brought back some nice memories about this project.  I had great fun designing the client-server architecture and I was really proud that I could handle multiple clients by forking off the server process.  It's a pity though that the code didn't move any telescopes...&lt;/p&gt;
+&lt;/div&gt;
+</summary></entry><entry><title>The ultimate eclipsometer™</title><link href="http://thewagner.net/blog/2015/03/20/the-ultimate-eclipsometertm/" rel="alternate"></link><updated>2015-03-20T00:00:00+01:00</updated><author><name>Dávid</name></author><id>tag:thewagner.net,2015-03-20:blog/2015/03/20/the-ultimate-eclipsometertm/</id><summary type="html">&lt;p&gt;On the day of the &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Solar_eclipse_of_March_20,_2015"&gt;solar eclpise&lt;/a&gt; I improvized a &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Camera_obscura"&gt;camera obscura&lt;/a&gt; in the office.  It's not nice, but functional and took only 10 minutes to make it.  It was great fun to see my colleagues tucking their heads in the box to see the phenomenon.&lt;/p&gt;
+&lt;div class="figure align-center"&gt;
+&lt;a class="reference external image-reference" href="http://thewagner.net/static/images/eclipse-1.jpg"&gt;&lt;img alt="|filename|/images/eclipse-1.jpg" src="http://thewagner.net/static/images/eclipse-1.jpg" /&gt;&lt;/a&gt;
+&lt;p class="caption"&gt;I got a cardboard box from the store.  I used a piece of plastic (cut out
+from a 3.5&amp;quot; floppy disk) to create a thin slit.  The slit is fixed over a
+hole I cut in the side of the cardboard.  An office chair provides the
+support.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="figure"&gt;
+&lt;a class="reference external image-reference" href="http://thewagner.net/static/images/eclipse-2.jpg"&gt;&lt;img alt="|filename|/images/eclipse-2.jpg" src="http://thewagner.net/static/images/eclipse-2.jpg" /&gt;&lt;/a&gt;
+&lt;p class="caption"&gt;I glued a white sheet of paper in the box, on the side that is opposite to
+the slit.  The image of the eclipse is small, but surprisingly sharp.&lt;/p&gt;
+&lt;/div&gt;
+</summary></entry><entry><title>My blogging workflow with git</title><link href="http://thewagner.net/blog/2013/08/09/my-blogging-workflow-with-git/" rel="alternate"></link><updated>2013-08-09T00:00:00+02:00</updated><author><name>Dávid</name></author><id>tag:thewagner.net,2013-08-09:blog/2013/08/09/my-blogging-workflow-with-git/</id><summary type="html">&lt;p&gt;This is a description of my &lt;a class="reference external" href="http://git-scm.org"&gt;git&lt;/a&gt; workflow for writing blog posts.  I will use this very post as an example and explain in detail how it was made.&lt;/p&gt;
+&lt;div class="section" id="start-a-new-topical-branch"&gt;
+&lt;h2&gt;Start a new topical branch&lt;/h2&gt;
+&lt;p&gt;I create a topical branch named &lt;tt class="docutils literal"&gt;workflow&lt;/tt&gt; (because I'm working on a post about my workflow) from the &lt;tt class="docutils literal"&gt;master&lt;/tt&gt; branch&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;git checkout -b workflow
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;I edit the file &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;content/tech/2013-08-09-Git-workflow.rst&lt;/span&gt;&lt;/tt&gt; and start writing the post.  When I have enough typing for the day I commit the changes:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;git add content/tech/2013-08-09-Git-workflow.rst
+&lt;span class="nv"&gt;$ &lt;/span&gt;git commit -m &lt;span class="s1"&gt;&amp;#39;Add post: Git workflow.&amp;#39;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;It rarely happens that I finish a post in one go.  When I feel like writing more I make some modifications (still on the &lt;tt class="docutils literal"&gt;workflow&lt;/tt&gt; branch) and commit them:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;git commit -a -m &lt;span class="s1"&gt;&amp;#39;Continue workflow post.&amp;#39;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;It typically takes two or three iterations, adding parts, fixing typos, etc. until the post is finished.  In the end the topical branch contains quite a few commits since it was forked off from &lt;tt class="docutils literal"&gt;master&lt;/tt&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;git log master..
+&lt;span class="o"&gt;[&lt;/span&gt;there may be some more commits here&lt;span class="o"&gt;]&lt;/span&gt;
+
+commit 4f721af41b2c0d52a8456bb6735ad0f56754ea98
+Author: David Wagner
+Date:   Fri Aug &lt;span class="m"&gt;9&lt;/span&gt; 10:44:58 &lt;span class="m"&gt;2013&lt;/span&gt; +0200
+
+    git log output.
+
+commit f77de095d0d5225a566782c52133be7f65166016
+Author: David Wagner
+Date:   Fri Aug &lt;span class="m"&gt;9&lt;/span&gt; 10:44:30 &lt;span class="m"&gt;2013&lt;/span&gt; +0200
+
+    Add summary.
+
+commit e332a4b53c8cdd94f3117a949a99367b56a8bc6e
+Author: David Wagner
+Date:   Fri Aug &lt;span class="m"&gt;9&lt;/span&gt; 10:39:38 &lt;span class="m"&gt;2013&lt;/span&gt; +0200
+
+    Add post: Git workflow.
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="rebase-on-master-and-squash-commits"&gt;
+&lt;h2&gt;Rebase on master and squash commits&lt;/h2&gt;
+&lt;p&gt;I want to &amp;quot;compress&amp;quot; all these into one single commit, since there's no point having commits in the &lt;tt class="docutils literal"&gt;master&lt;/tt&gt; branch with messages such as &amp;quot;Add summary&amp;quot;, &amp;quot;Fix typo.&amp;quot;, &amp;quot;Continue this and that.&amp;quot;.  In git's words this is called interactive rebasing.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;git rebase -i master
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This pops up &lt;tt class="docutils literal"&gt;$EDITOR&lt;/tt&gt; with a file to edit the rebase plan:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;pick e332a4b Add post: Git workflow.
+pick f77de09 Add summary.
+pick 4f721af git log output.
+
+&lt;span class="c"&gt;# Rebase 6ed71cf..9be73d2 onto 6ed71cf&lt;/span&gt;
+&lt;span class="c"&gt;#&lt;/span&gt;
+&lt;span class="c"&gt;# Commands:&lt;/span&gt;
+&lt;span class="c"&gt;#  p, pick = use commit&lt;/span&gt;
+&lt;span class="c"&gt;#  r, reword = use commit, but edit the commit message&lt;/span&gt;
+&lt;span class="c"&gt;#  e, edit = use commit, but stop for amending&lt;/span&gt;
+&lt;span class="c"&gt;#  s, squash = use commit, but meld into previous commit&lt;/span&gt;
+&lt;span class="c"&gt;#  f, fixup = like &amp;quot;squash&amp;quot;, but discard this commit&amp;#39;s log message&lt;/span&gt;
+&lt;span class="c"&gt;#  x, exec = run command (the rest of the line) using shell&lt;/span&gt;
+&lt;span class="c"&gt;#&lt;/span&gt;
+&lt;span class="c"&gt;# These lines can be re-ordered; they are executed from top to bottom.&lt;/span&gt;
+&lt;span class="c"&gt;#&lt;/span&gt;
+&lt;span class="c"&gt;# If you remove a line here THAT COMMIT WILL BE LOST.&lt;/span&gt;
+&lt;span class="c"&gt;# However, if you remove everything, the rebase will be aborted.&lt;/span&gt;
+&lt;span class="c"&gt;#&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The comments explain very clearly what I need to do: I modify the file to contain the following (omitting the comments):&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+pick e332a4b Add post: Git workflow.
+squash f77de09 Add summary.
+squash 4f721af git log output.
+&lt;/pre&gt;
+&lt;p&gt;When the file is saved, I exit from the editor.  Git starts the rebase offering to edit the commit message for each posts to remain, then finally reporting:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+[...]
+Successfully rebased and updated refs/heads/workflow.
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="section" id="merge-into-master-and-publish"&gt;
+&lt;h2&gt;Merge into master and publish&lt;/h2&gt;
+&lt;p&gt;Now I switch back to &lt;tt class="docutils literal"&gt;master&lt;/tt&gt; and merge, then delete the topical branch:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;git checkout master
+&lt;span class="nv"&gt;$ &lt;/span&gt;git merge workflow
+&lt;span class="nv"&gt;$ &lt;/span&gt;git branch -d workflow
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The new post is ready, the blog can be regenerated and published.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="summary"&gt;
+&lt;h2&gt;Summary&lt;/h2&gt;
+&lt;p&gt;In short, I'm quite pleased with this setup.  Using the combination of git and the &lt;a class="reference external" href="http://docs.getpelican.com"&gt;Pelican&lt;/a&gt; static blog generator is really easy and has a lot of advantages: I can work on multiple posts at the same time, even offline and publishing is just a matter of a &lt;tt class="docutils literal"&gt;git push&lt;/tt&gt;.  The above workflow rose naturally, when I became to know enough about git's branches and rebasing.&lt;/p&gt;
+&lt;p&gt;Evidently this whole thing may appear way more complicated than necessary for the faint hearted on Blogger, however this branch juggling turns out to be quite powerful when it's about software development in the wild where clean commits and keeping track of changes you make on the codebase are essential.&lt;/p&gt;
+&lt;/div&gt;
+</summary></entry><entry><title>Total control</title><link href="http://thewagner.net/blog/2013/07/22/total-control/" rel="alternate"></link><updated>2013-07-22T00:00:00+02:00</updated><author><name>Dávid</name></author><id>tag:thewagner.net,2013-07-22:blog/2013/07/22/total-control/</id><summary type="html">&lt;p&gt;I ordered some electronic components from &lt;a class="reference external" href="http://play-zone.ch"&gt;Play-Zone&lt;/a&gt; which made me really easy to control my unipolar stepper motor and read data from a 10k potentiometer.&lt;/p&gt;
+&lt;div class="section" id="stepper-motor"&gt;
+&lt;h2&gt;Stepper motor&lt;/h2&gt;
+&lt;p&gt;After sufficient &lt;a class="reference external" href="http://thewagner.net/blog/2013/07/19/prototypes-for-stepper-motor-control/"&gt;preparation&lt;/a&gt;, it took me less than 15 minutes to have a nicely purring and turning stepper motor on the breadboard.  The key element, a ULN2803A containing 8 Darlington Arrays, takes care of everything.&lt;/p&gt;
+&lt;img alt="|filename|/images/pi/stepper_prototype_3_schem.png" src="http://thewagner.net/static/images/pi/stepper_prototype_3_schem.png" /&gt;
+&lt;/div&gt;
+&lt;div class="section" id="potentiometer"&gt;
+&lt;h2&gt;Potentiometer&lt;/h2&gt;
+&lt;p&gt;Not strictly related, but in the same go I used the newly arrived MCP3002 ADC to read the position of a 10k potentiometer.  I borrowed some code from the &lt;a class="reference external" href="http://learn.adafruit.com/reading-a-analog-in-and-controlling-audio-volume-with-the-raspberry-pi/overview"&gt;Adafruit website&lt;/a&gt; with some modifications from &lt;a class="reference external" href="http://dmt195.wordpress.com/2012/09/26/mcp3002-example-code-for-raspberry-pi-adc-through-spi/"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;img alt="|filename|/images/pi/potentiometer_schem.png" src="http://thewagner.net/static/images/pi/potentiometer_schem.png" /&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;#!/usr/bin/env python&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;time&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;RPi.GPIO&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;GPIO&lt;/span&gt;
+
+&lt;span class="n"&gt;GPIO&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setmode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;GPIO&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;BOARD&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c"&gt;# read SPI data from MCP3002 chip, 2 possible adc&amp;#39;s (0 thru 1)&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;readadc&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;adcnum&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;clockpin&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;mosipin&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;misopin&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;cspin&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;adcnum&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="ow"&gt;or&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;adcnum&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)):&lt;/span&gt;
+                &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
+        &lt;span class="n"&gt;GPIO&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;output&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cspin&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+        &lt;span class="n"&gt;GPIO&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;output&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;clockpin&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c"&gt;# start clock low&lt;/span&gt;
+        &lt;span class="n"&gt;GPIO&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;output&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cspin&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;     &lt;span class="c"&gt;# bring CS low&lt;/span&gt;
+
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;adcnum&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;commandout&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mh"&gt;0x6&lt;/span&gt;
+        &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;commandout&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mh"&gt;0x7&lt;/span&gt;
+        &lt;span class="n"&gt;commandout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;=&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;    &lt;span class="c"&gt;# we only need to send 3 bits here&lt;/span&gt;
+        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+                &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;commandout&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="mh"&gt;0x80&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+                        &lt;span class="n"&gt;GPIO&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;output&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;mosipin&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+                &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                        &lt;span class="n"&gt;GPIO&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;output&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;mosipin&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+                &lt;span class="n"&gt;commandout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+                &lt;span class="n"&gt;GPIO&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;output&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;clockpin&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+                &lt;span class="n"&gt;GPIO&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;output&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;clockpin&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+        &lt;span class="n"&gt;adcout&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+        &lt;span class="c"&gt;# read in one empty bit, one null bit and 10 ADC bits&lt;/span&gt;
+        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;12&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+                &lt;span class="n"&gt;GPIO&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;output&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;clockpin&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+                &lt;span class="n"&gt;GPIO&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;output&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;clockpin&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+                &lt;span class="n"&gt;adcout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+                &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;GPIO&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;input&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;misopin&lt;/span&gt;&lt;span class="p"&gt;)):&lt;/span&gt;
+                        &lt;span class="n"&gt;adcout&lt;/span&gt; &lt;span class="o"&gt;|=&lt;/span&gt; &lt;span class="mh"&gt;0x1&lt;/span&gt;
+
+        &lt;span class="n"&gt;GPIO&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;output&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cspin&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+        &lt;span class="n"&gt;adcout&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&amp;gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;       &lt;span class="c"&gt;# first bit is &amp;#39;null&amp;#39; so drop it&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;adcout&lt;/span&gt;
+
+&lt;span class="n"&gt;SPICS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;18&lt;/span&gt;
+&lt;span class="n"&gt;SPIMOSI&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;19&lt;/span&gt;
+&lt;span class="n"&gt;SPIMISO&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;21&lt;/span&gt;
+&lt;span class="n"&gt;SPICLK&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;23&lt;/span&gt;
+
+&lt;span class="c"&gt;# set up the SPI interface pins&lt;/span&gt;
+&lt;span class="n"&gt;GPIO&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setup&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;SPIMOSI&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;GPIO&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;OUT&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;GPIO&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setup&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;SPIMISO&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;GPIO&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;IN&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;GPIO&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setup&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;SPICLK&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;GPIO&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;OUT&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;GPIO&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setup&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;SPICS&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;GPIO&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;OUT&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c"&gt;# 10k trim pot connected to adc #0&lt;/span&gt;
+&lt;span class="n"&gt;potentiometer_adc&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="n"&gt;last_read&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;       &lt;span class="c"&gt;# this keeps track of the last potentiometer value&lt;/span&gt;
+&lt;span class="n"&gt;tolerance&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;       &lt;span class="c"&gt;# to keep from being jittery we&amp;#39;ll only change&lt;/span&gt;
+                    &lt;span class="c"&gt;# volume when the pot has moved more than 5 &amp;#39;counts&amp;#39;&lt;/span&gt;
+
+&lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="c"&gt;# we&amp;#39;ll assume that the pot didn&amp;#39;t move&lt;/span&gt;
+        &lt;span class="n"&gt;trim_pot_changed&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;
+
+        &lt;span class="c"&gt;# read the analog pin&lt;/span&gt;
+        &lt;span class="n"&gt;trim_pot&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;readadc&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;potentiometer_adc&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;SPICLK&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;SPIMOSI&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;SPIMISO&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;SPICS&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="c"&gt;# how much has it changed since the last read?&lt;/span&gt;
+        &lt;span class="n"&gt;pot_adjust&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;abs&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;trim_pot&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;last_read&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pot_adjust&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;tolerance&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+               &lt;span class="n"&gt;trim_pot_changed&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;
+
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;trim_pot_changed&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="c"&gt;# convert 10bit adc0 (0-1024) trim pot read into&lt;/span&gt;
+                &lt;span class="c"&gt;# 0-100 volume level&lt;/span&gt;
+                &lt;span class="n"&gt;set_volume&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;trim_pot&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="mf"&gt;10.24&lt;/span&gt;
+                &lt;span class="n"&gt;set_volume&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;round&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;set_volume&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c"&gt;# round out decimal value&lt;/span&gt;
+                &lt;span class="n"&gt;set_volume&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;set_volume&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c"&gt;# cast volume as integer&lt;/span&gt;
+
+                &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;volume = {volume}%&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;volume&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;set_volume&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+                &lt;span class="c"&gt;# save the potentiometer reading for the next loop&lt;/span&gt;
+                &lt;span class="n"&gt;last_read&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;trim_pot&lt;/span&gt;
+
+        &lt;span class="c"&gt;# hang out and do nothing for a half second&lt;/span&gt;
+        &lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sleep&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;0.5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;These two (independent) circuits make a big mess on the breadboard, but it was a lot of fun to wire it up.  Now I can read analog as well as digital inputs from the real world with the Raspberry Pi! Yay!&lt;/p&gt;
+&lt;img alt="|filename|/images/pi/potentiometer_breadboard.jpg" src="http://thewagner.net/static/images/pi/potentiometer_breadboard.jpg" /&gt;
+&lt;/div&gt;
+</summary></entry><entry><title>Prototypes for stepper motor control</title><link href="http://thewagner.net/blog/2013/07/19/prototypes-for-stepper-motor-control/" rel="alternate"></link><updated>2013-07-19T00:00:00+02:00</updated><author><name>Dávid</name></author><id>tag:thewagner.net,2013-07-19:blog/2013/07/19/prototypes-for-stepper-motor-control/</id><summary type="html">&lt;p&gt;I have a unipolar stepper motor I want to control with my Raspberry Pi.
+First I needed to figure out the motor coils' wiring, then I wrote a small
+test script to provide the correct sequence on the GPIO ports.&lt;/p&gt;
+&lt;div class="section" id="wiring"&gt;
+&lt;h2&gt;Wiring&lt;/h2&gt;
+&lt;p&gt;I read about &lt;a class="reference external" href="http://www.stepperworld.com/Tutorials/pgUnipolarTutorial.htm"&gt;stepper motors&lt;/a&gt;, and made the following circuit on the
+breadboard.&lt;/p&gt;
+&lt;img alt="|filename|/images/pi/stepper_prototype_1.jpg" src="http://thewagner.net/static/images/pi/stepper_prototype_1.jpg" /&gt;
+&lt;p&gt;A 9V battery, an indicator led to show if the power is on, and four
+switches.  When a switch is pressed one phase (half coil) is energized.  For
+some unknown reason I managed to get the wiring right for the first time, so
+pressing the switches one after the other, from top to bottom, made the
+motor turn one step.&lt;/p&gt;
+&lt;p&gt;The 6 wires of this motor (Japan Servo KP68P2-406, 12V, 33 Ω/phase, 1.8
+deg/step) are the following:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;2 red (center taps)&lt;/li&gt;
+&lt;li&gt;orange (phase 1)&lt;/li&gt;
+&lt;li&gt;brown (phase 2)&lt;/li&gt;
+&lt;li&gt;yellow (phase 3)&lt;/li&gt;
+&lt;li&gt;black (phase 4)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div class="section" id="sequence-test"&gt;
+&lt;h2&gt;Sequence test&lt;/h2&gt;
+&lt;p&gt;I wrote a small test script to output the step sequence on the Pi's GPIO
+ports.  It has a lot of cool features:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;sudo python stepper_seq.py -h  &lt;span class="c"&gt;# help&lt;/span&gt;
+&lt;span class="nv"&gt;$ &lt;/span&gt;sudo python stepper_seq.py  &lt;span class="c"&gt;# turns the motor indefinitely, Control-C terminates&lt;/span&gt;
+&lt;span class="nv"&gt;$ &lt;/span&gt;sudo python stepper_seq.py -s half -r -n &lt;span class="m"&gt;4&lt;/span&gt;  &lt;span class="c"&gt;# 4 times the half-step sequence, reversed&lt;/span&gt;
+&lt;span class="nv"&gt;$ &lt;/span&gt;sudo python stepper_seq.py -s kitt  &lt;span class="c"&gt;# nothing to do with stepper motors ;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;And the code of &lt;tt class="docutils literal"&gt;stepper_seq.py&lt;/tt&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;#!/usr/bin/env python&lt;/span&gt;
+&lt;span class="c"&gt;# stepper_seq.py - Stepper motor sequence test&lt;/span&gt;
+&lt;span class="c"&gt;# Copyright (C) 2013 David Wagner&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;itertools&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;chain&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;cycle&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;repeat&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;argparse&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;RPi.GPIO&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;GPIO&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;signal&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;sys&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;time&lt;/span&gt;
+
+&lt;span class="n"&gt;sequences&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="c"&gt;# Wave Drive, One-Phase&lt;/span&gt;
+             &lt;span class="s"&gt;&amp;#39;one&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[[&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+                     &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+                     &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+                     &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;]],&lt;/span&gt;
+             &lt;span class="c"&gt;# Hi-Torque, Two-Phase&lt;/span&gt;
+             &lt;span class="s"&gt;&amp;#39;two&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[[&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+                     &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+                     &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+                     &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;]],&lt;/span&gt;
+             &lt;span class="c"&gt;# Half-Step&lt;/span&gt;
+             &lt;span class="s"&gt;&amp;#39;half&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[[&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+                      &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+                      &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+                      &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+                      &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+                      &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+                      &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+                      &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;]]}&lt;/span&gt;
+
+&lt;span class="n"&gt;sequences&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;update&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;kitt&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;sequences&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;one&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;][:&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;
+                           &lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;reversed&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;sequences&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;one&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])))})&lt;/span&gt;
+
+&lt;span class="n"&gt;parser&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;argparse&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ArgumentParser&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;description&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;Stepper motor sequence test.&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;parser&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add_argument&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;-p&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;--pins&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;metavar&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;num&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;nargs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                    &lt;span class="n"&gt;default&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;12&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;13&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;15&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+                    &lt;span class="n"&gt;help&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;GPIO pins to activate (numbering by BOARD)&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;parser&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add_argument&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;-s&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;--seq&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;default&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;one&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                    &lt;span class="n"&gt;choices&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;sorted&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;sequences&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;keys&lt;/span&gt;&lt;span class="p"&gt;()),&lt;/span&gt;
+                    &lt;span class="n"&gt;help&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;Coil activation sequence.&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;parser&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add_argument&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;-d&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;--delay&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;float&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;default&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;0.5&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                    &lt;span class="n"&gt;help&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;Delay in seconds.&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;parser&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add_argument&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;-r&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;--reverse&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;action&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;store_true&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                    &lt;span class="n"&gt;help&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;Reverse direction.&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;parser&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add_argument&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;-n&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;--num&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;default&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                    &lt;span class="n"&gt;help&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;Number of complete cycles.&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;args&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;parser&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;parse_args&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;init_board&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="n"&gt;GPIO&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setmode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;GPIO&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;BOARD&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;pin&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pins&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;GPIO&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setup&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pin&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;GPIO&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;OUT&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;init_pins&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;pin&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pins&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;GPIO&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;output&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pin&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;signal_handler&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;signal&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;frame&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Interrupted. Exiting...&amp;quot;&lt;/span&gt;
+    &lt;span class="n"&gt;init_pins&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exit&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;ncycles&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;iterable&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="s"&gt;&amp;quot;Returns the sequence elements n times&amp;quot;&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;chain&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;from_iterable&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;repeat&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;tuple&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;iterable&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;step&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;pin_order&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;reversed&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pins&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;reverse&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pins&lt;/span&gt;
+    &lt;span class="n"&gt;rep&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;cycle&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="k"&gt;lambda&lt;/span&gt; &lt;span class="n"&gt;it&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;ncycles&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;it&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;seq&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;rep&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;sequences&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;seq&lt;/span&gt;&lt;span class="p"&gt;]):&lt;/span&gt;
+        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;pin&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;status&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;zip&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pin_order&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;seq&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+            &lt;span class="n"&gt;GPIO&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;output&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pin&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;status&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sleep&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;delay&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="n"&gt;signal&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;signal&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;signal&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;SIGINT&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;signal_handler&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;init_board&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;init_pins&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;step&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;__name__&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;__main__&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="sequence-test-hardware"&gt;
+&lt;h2&gt;Sequence test hardware&lt;/h2&gt;
+&lt;p&gt;I put together a circuit to test the script above.  It contains four LEDs,
+each connected to one of the Pi's GPIO ports through a transistor.  The
+LED's could be directly connected to the IO ports, but in this project I
+wanted to refresh how to use a &lt;a class="reference external" href="http://www.ermicro.com/blog/?p=423"&gt;transistor as a switch&lt;/a&gt; so that the LEDs can be powered from
+an external power supply.&lt;/p&gt;
+&lt;img alt="|filename|/images/pi/stepper_prototype_2_schem.png" src="http://thewagner.net/static/images/pi/stepper_prototype_2_schem.png" /&gt;
+&lt;p&gt;And on the breadboard it looks like this:&lt;/p&gt;
+&lt;img alt="|filename|/images/pi/stepper_prototype_2.jpg" src="http://thewagner.net/static/images/pi/stepper_prototype_2.jpg" /&gt;
+&lt;/div&gt;
+</summary></entry><entry><title>Led and button</title><link href="http://thewagner.net/blog/2013/06/26/led-and-button/" rel="alternate"></link><updated>2013-06-26T00:00:00+02:00</updated><author><name>Dávid</name></author><id>tag:thewagner.net,2013-06-26:blog/2013/06/26/led-and-button/</id><summary type="html">&lt;p&gt;I finally got around to tinkering with the Raspberry Pi hardware.  A while
+ago I'd ordered a basic electronic kit from ebay with a breadboard and a
+bunch of electronic components (resistors, cables, etc) in it.  I started
+with a rather elementary project: control of an LED and a push-button from
+the Pi.  Despite its apparent simplicity it's a good opportunity re-learn
+some basics: which is the anode/cathode of the LED?  What's a
+pull-up/pull-down resistor? and so on...&lt;/p&gt;
+&lt;p&gt;Here's the final 'product':&lt;/p&gt;
+&lt;img alt="|filename|/images/pi/photo_led_button_1.jpg" src="http://thewagner.net/static/images/pi/photo_led_button_1.jpg" style="width: 49%;" /&gt;
+&lt;img alt="|filename|/images/pi/photo_led_button_2.jpg" src="http://thewagner.net/static/images/pi/photo_led_button_2.jpg" style="width: 49%;" /&gt;
+&lt;p&gt;I needed to cut open up my fancy &lt;a class="reference external" href="http://thewagner.net/blog/2013/03/17/cardboard-raspberry-pi-case/"&gt;cardboard case&lt;/a&gt; :-( to gain access to the
+GPIO ports on the Pi.  I may design a new case in the futre, one that allows
+direct connection to the board.&lt;/p&gt;
+&lt;p&gt;I drew the circuit diagram using the &lt;a class="reference external" href="http://www.mbeckler.org/inkscape/circuit_symbols/"&gt;circuit symbol set&lt;/a&gt; for &lt;a class="reference external" href="http://inkscape.org"&gt;Inkscape&lt;/a&gt;.&lt;/p&gt;
+&lt;img alt="|filename|/images/pi/schematic_led_button.png" src="http://thewagner.net/static/images/pi/schematic_led_button.png" style="width: 98%;" /&gt;
+&lt;p&gt;The drive this wonderful piece of hardware, I wrote the following code that
+makes the LED blinking (yaaaay):&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# led_blink.py&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;time&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;RPi.GPIO&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;GPIO&lt;/span&gt;
+
+&lt;span class="c"&gt;# Set the mode of numbering the pins.&lt;/span&gt;
+&lt;span class="n"&gt;GPIO&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setmode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;GPIO&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;BOARD&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;GPIO&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setup&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;12&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;GPIO&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;OUT&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c"&gt;# Initialise GPIO10 to high (true) so that the LED is off.&lt;/span&gt;
+&lt;span class="n"&gt;status&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;
+&lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;GPIO&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;output&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;12&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;status&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;status&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="n"&gt;status&lt;/span&gt;
+        &lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sleep&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;and this program turns the LED on when the button is pressed:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# led_button.py&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;RPi.GPIO&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;GPIO&lt;/span&gt;
+
+&lt;span class="c"&gt;# Set the mode of numbering the pins.&lt;/span&gt;
+&lt;span class="n"&gt;GPIO&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setmode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;GPIO&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;BOARD&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;GPIO&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setup&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;GPIO&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;IN&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;GPIO&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setup&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;12&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;GPIO&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;OUT&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c"&gt;# Initialise to high (true) so that the LED is off.&lt;/span&gt;
+&lt;span class="n"&gt;GPIO&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;output&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;12&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;button_pressed&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;
+&lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;GPIO&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;input&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="n"&gt;button_pressed&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;Button pressed.&amp;#39;&lt;/span&gt;
+                &lt;span class="n"&gt;button_pressed&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;
+        &lt;span class="n"&gt;GPIO&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;output&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;12&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;button_pressed&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;Button released.&amp;#39;&lt;/span&gt;
+                &lt;span class="n"&gt;button_pressed&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;
+        &lt;span class="c"&gt;# When the button switch is not pressed, turn off the LED.&lt;/span&gt;
+        &lt;span class="n"&gt;GPIO&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;output&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;12&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;I took the inspiration and some sample code from the following places:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://visualgdb.com/tutorials/raspberry/LED/"&gt;http://visualgdb.com/tutorials/raspberry/LED/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.cl.cam.ac.uk/projects/raspberrypi/tutorials/turing-machine/two.html"&gt;http://www.cl.cam.ac.uk/projects/raspberrypi/tutorials/turing-machine/two.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="raspberrypi"></category></entry><entry><title>Fresh theme</title><link href="http://thewagner.net/blog/2013/06/18/fresh-theme/" rel="alternate"></link><updated>2013-06-18T00:00:00+02:00</updated><author><name>Dávid</name></author><id>tag:thewagner.net,2013-06-18:blog/2013/06/18/fresh-theme/</id><summary type="html">&lt;p&gt;I changed the blog's theme from the default to &lt;a class="reference external" href="https://github.com/jsliang/pelican-fresh/"&gt;fresh&lt;/a&gt;.  I wanted to have
+something that uses &lt;a class="reference external" href="http://twitter.github.io/bootstrap/"&gt;Twitter Bootstrap&lt;/a&gt; so that if you resize the browser
+window, or read the posts on a small screen, the layout changes dynamically.&lt;/p&gt;
+&lt;p&gt;Also, now there's a Github ribbon in the top right corner, and social links
+on the right.&lt;/p&gt;
+</summary></entry><entry><title>Backup</title><link href="http://thewagner.net/blog/2013/05/15/backup/" rel="alternate"></link><updated>2013-05-15T00:00:00+02:00</updated><author><name>Dávid</name></author><id>tag:thewagner.net,2013-05-15:blog/2013/05/15/backup/</id><summary type="html">&lt;p&gt;At work, I stored all my important data on the lab's server which
 (obviously) was backed up once a day.  At home, on my personal laptop I
 haven't had a systematic backup solution.  Now I'm changing this.&lt;/p&gt;
 &lt;div class="section" id="everyday-backup-with-obnam"&gt;
@@ -75,7 +675,7 @@ purity.&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 dd if=/dev/hda | ssh user&amp;#64;braindead sudo dd of=/dev/sda
 &lt;/pre&gt;
-&lt;p&gt;To this end I boot up &lt;tt class="docutils literal"&gt;brainded&lt;/tt&gt; (with the new drive in) from a &lt;a class="reference external" href="http://www.debian.org/CD/live/"&gt;Debian
+&lt;p&gt;To this end I boot up &lt;tt class="docutils literal"&gt;braindead&lt;/tt&gt; (with the new drive in) from a &lt;a class="reference external" href="http://www.debian.org/CD/live/"&gt;Debian
 Live CD&lt;/a&gt;.  While setting up the network
 (IP address, DNS, etc.), it turns out that the network card needs some
 non-free firmware which are not on the Installer/Live CD.  This is a bit
@@ -127,7 +727,7 @@ the &lt;tt class="docutils literal"&gt;make clean&lt;/tt&gt; command destroying 
 directory and deleting the files needed for Github Pages.  So now the
 &lt;tt class="docutils literal"&gt;clean&lt;/tt&gt; target is:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nf"&gt;clean&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-    @find &lt;span class="k"&gt;$(&lt;/span&gt;OUTPUTDIR&lt;span class="k"&gt;)&lt;/span&gt; -mindepth 1 -not -iwholename &lt;span class="s1"&gt;&amp;#39;*/.git*&amp;#39;&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
+    @find &lt;span class="k"&gt;$(&lt;/span&gt;OUTPUTDIR&lt;span class="k"&gt;)&lt;/span&gt; -mindepth &lt;span class="m"&gt;1&lt;/span&gt; -not -iwholename &lt;span class="s1"&gt;&amp;#39;*/.git*&amp;#39;&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
                                    -not -name &lt;span class="s1"&gt;&amp;#39;README.md&amp;#39;&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
                                    -not -name &lt;span class="s1"&gt;&amp;#39;CNAME&amp;#39;&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;

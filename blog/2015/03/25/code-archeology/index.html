@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="author" content="Dávid" />
+    <meta name="robots" content="index, follow"/>
+
+    <meta property="og:title" content="Code archeology"/>
+    <meta property="og:url" content="http://thewagner.net/blog/2015/03/25/code-archeology/"/>
+    <meta property="og:site_name" content="The Wagner"/>
+    <meta property="og:type" content="article"/>
+
+    <link rel="canonical" href="http://thewagner.net/blog/2015/03/25/code-archeology/" />
+
+    <title>Code archeology | The Wagner</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" />
+    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" />
+
+    <link rel="stylesheet" type="text/css" href="http://thewagner.net/theme/css/main.css" />
+        <link href="http://thewagner.net/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="The Wagner Atom Feed" />
+        
+    <script type="text/javascript">var switchTo5x=true;</script>
+    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+    <script type="text/javascript">
+        stLight.options({
+            publisher: "",
+            doNotHash: false,
+            doNotCopy: false,
+            hashAddressBar: false
+        });
+    </script>
+</head>
+
+<body id="index">
+    <div class="row-fluid">
+        <div class="span10 offset1">
+            <header id="banner" >
+                <h1>
+                    <a href="http://thewagner.net/">The Wagner </a>
+                </h1>
+                <nav class="navbar">
+                    <div class="navbar-inner">
+                        <ul class="nav">
+                                                    <li ><a href="/archives.html">archives</a></li>
+                                                                                                    <li ><a href="http://thewagner.net/pages/about.html">About</a></li>
+                                                                                                                            <li ><a href="http://thewagner.net/category/blog.html">blog</a></li>
+                                                    <li class="active"><a href="http://thewagner.net/category/tech.html">tech</a></li>
+                                                                        </ul>
+
+                                            </div>
+                </nav>
+            </header><!-- /#banner -->
+        </div>
+    </div>
+
+    <div class="row-fluid">
+        <div class="span10 offset1">
+            <div class="row-fluid">
+                <div class="span10 offset1">
+  <section>
+    <article>
+      <header>
+        <h1 class="entry-title">
+          <a href="http://thewagner.net/blog/2015/03/25/code-archeology/" rel="bookmark"
+             title="Permalink to Code archeology">Code archeology</a></h1>
+              </header>
+      <div class="entry-content">
+        <footer class="post-info">
+        <address class="vcard author">
+        by <a class="url fn" href="http://thewagner.net/author/david.html">Dávid</a>
+    </address>
+    
+    in <a href="http://thewagner.net/category/tech.html">tech</a>
+
+    on 2015-03-25
+
+    
+    
+    
+        
+</footer><!-- /.post-info -->
+        
+        <p>Back in 2004 a friend of mine was building a telescope and I wanted it to have
+an automated control system, where the user can select a star she
+wants to see and the system would automatically orient the telescope towards the
+appropriate celestial coordinates.  I called this ambitious plan: &quot;Project Starfinder&quot;.  The plan was that he builds the telescope and I write the software.  We both did our job separately, but we never got around to put our works together.</p>
+<p>Though Project Starfinder failed, the motor controller I built was quite a success.  The other day I was browsing through my old backups and I stumbled upon the code I wrote 11 years ago.  <tt class="docutils literal">motorc</tt> and <tt class="docutils literal">motord</tt> were the client and the server component, respectively, of my stepper motor controller.</p>
+<div class="section" id="daemon">
+<h2>Daemon</h2>
+<p>The <tt class="docutils literal">motord</tt> daemon was responsible to receive messages from the connected clients and translate them to instructions to be written to the parallel port.  I also built a circuit that could drive four motors connected to the PCs parallel port.  The daemon needed to run with root privileges.</p>
+<p>The daemon was accepting connections on a PF_LOCAL socket.  For each incoming connection the daemon forked off a child process to handle the one to one communication with the connected client.  I had read somewhere that Apache worked this way and I remember being quiet very to learn about <tt class="docutils literal">fork()</tt>.</p>
+<p>I used <tt class="docutils literal">select</tt> on an <tt class="docutils literal">fd_set</tt> to process the incoming messages.  This caused me a lot of headaches.  I didn't really understand what was going on with these file descriptors.  Everything about them seemed magical.  I probably copied the respective code from a tutorial or somewhere.</p>
+<p>Anyhow, the messages arrived from the socket and they were processed in a large switch-case:</p>
+<div class="highlight"><pre><span class="n">pid</span> <span class="o">=</span> <span class="n">fork</span> <span class="p">();</span> <span class="cm">/* forking off */</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">pid</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="cm">/* if we are a child process */</span>
+<span class="p">{</span>
+   <span class="n">select</span> <span class="p">(</span><span class="n">FD_SETSIZE</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">set</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">timeout</span><span class="p">);</span>
+   <span class="k">while</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+   <span class="p">{</span>
+      <span class="n">read</span> <span class="p">(</span><span class="n">client</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">t_motor_command</span><span class="p">));</span>
+      <span class="k">if</span> <span class="p">(</span><span class="n">debug</span><span class="p">)</span>
+         <span class="n">syslog</span> <span class="p">(</span><span class="n">LOG_DAEMON</span> <span class="o">|</span> <span class="n">LOG_DEBUG</span><span class="p">,</span>
+                 <span class="s">&quot;Instruction: 0x%x, Address: 0x%x&quot;</span><span class="p">,</span>
+                 <span class="n">data</span><span class="o">-&gt;</span><span class="n">inst</span><span class="p">,</span>
+                 <span class="n">data</span><span class="o">-&gt;</span><span class="n">addr</span><span class="p">);</span>
+
+      <span class="k">if</span> <span class="p">(</span><span class="n">data</span><span class="o">-&gt;</span><span class="n">inst</span> <span class="o">==</span> <span class="n">BYE</span><span class="p">)</span>
+         <span class="k">break</span><span class="p">;</span> <span class="cm">/* TODO: a safer solution needed */</span>
+
+      <span class="k">switch</span> <span class="p">(</span><span class="n">data</span><span class="o">-&gt;</span><span class="n">inst</span><span class="p">)</span>
+      <span class="p">{</span>
+         <span class="k">case</span> <span class="nl">MOTOREN</span><span class="p">:</span> <span class="cm">/* Motor enable */</span>
+             <span class="n">motors</span><span class="p">[</span><span class="n">data</span><span class="o">-&gt;</span><span class="n">addr</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">enabled</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+             <span class="k">break</span><span class="p">;</span>
+         <span class="k">case</span> <span class="nl">MOTORDIS</span><span class="p">:</span> <span class="cm">/* Motor disable */</span>
+             <span class="n">motors</span><span class="p">[</span><span class="n">data</span><span class="o">-&gt;</span><span class="n">addr</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">enabled</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+             <span class="k">break</span><span class="p">;</span>
+         <span class="k">case</span> <span class="nl">MOTORR</span><span class="p">:</span> <span class="cm">/* Direction right */</span>
+             <span class="n">motors</span><span class="p">[</span><span class="n">data</span><span class="o">-&gt;</span><span class="n">addr</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">direction</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+             <span class="k">break</span><span class="p">;</span>
+         <span class="k">case</span> <span class="nl">MOTORL</span><span class="p">:</span> <span class="cm">/* Direction left */</span>
+             <span class="n">motors</span><span class="p">[</span><span class="n">data</span><span class="o">-&gt;</span><span class="n">addr</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">direction</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+             <span class="k">break</span><span class="p">;</span>
+         <span class="k">case</span> <span class="nl">MOTORCLR</span><span class="p">:</span>     <span class="cm">/* clear the position */</span>
+             <span class="n">motors</span><span class="p">[</span><span class="n">data</span><span class="o">-&gt;</span><span class="n">addr</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">position</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+             <span class="k">break</span><span class="p">;</span>
+         <span class="cm">/* ... */</span>
+       <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+<p>This is the code from the source file almost literally.  I used 8 spaces for indentation and apparently I didn't care about lines longer than 80 characters back then.</p>
+<p>I developed a simple binary protocol to communicate over the socket.  The commands were represented by <tt class="docutils literal">t_motor_command</tt> data structure:</p>
+<div class="highlight"><pre><span class="k">typedef</span> <span class="k">struct</span>
+<span class="p">{</span>
+     <span class="n">WORD</span> <span class="n">inst</span><span class="p">;</span>  <span class="cm">/* instruction byte*/</span>
+     <span class="n">WORD</span> <span class="n">addr</span><span class="p">;</span>  <span class="cm">/* motor address   */</span>
+<span class="p">}</span> <span class="n">t_motor_command</span><span class="p">;</span>
+</pre></div>
+<p>Pretty standard stuff.</p>
+<p>The motor daemon also had the following features:</p>
+<ul class="simple">
+<li>read and parsed a configuration file</li>
+<li>supported arbitrary numbers of motors. In fact the motor objects were stored in a linked list.</li>
+<li>wrote log messages to the syslog</li>
+<li>changes in the motor position were made available to all clients</li>
+<li>handled SIGTERM and SIGCHILD signals and made a clean exit</li>
+<li>it was GPL licensed</li>
+</ul>
+<p>I didn't know how to use <tt class="docutils literal">valgrind</tt> or <tt class="docutils literal">gdb</tt> back then, so probably it leaked memory :-).</p>
+</div>
+<div class="section" id="graphical-client">
+<h2>Graphical client</h2>
+<p>My memories about development of the client application are more vague: it was much faster to develop it, and also it is much simpler program than the daemon.  I used Glade to design a GTK interface (with GTK 1.2).  I tried to compile the project in order to make some screenshots of the interface, but I failed.  The project depends on old libraries, moreover the newer version of Glade is having troubles reading the old interface files.</p>
+<p>Anyway the interface was quite simple: it had four knobs for the four motors.  As the user turned the knobs the motors turned.  Very exciting!  If you opened multiple clients the knobs were synchronized (there was no position feedback from the motors).</p>
+</div>
+<div class="section" id="summary">
+<h2>Summary</h2>
+<p>Reading through the code brought back some nice memories about this project.  I had great fun designing the client-server architecture and I was really proud that I could handle multiple clients by forking off the server process.  It's a pity though that the code didn't move any telescopes...</p>
+</div>
+
+
+              </div><!-- /.entry-content -->
+      
+    </article>
+  </section>
+</div>
+                            </div>
+        </div>
+    </div>
+
+    <footer id="site-footer">
+        <div class="row-fluid">
+            <div class="span10 offset1">
+                <address>
+                    <p>
+                        This blog is proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                    </p>
+                    <p>
+                        <a href="http://github.com/jsliang/pelican-fresh/">Fresh</a> is a responsive theme designed by <a href="http://jsliang.com/">jsliang</a> and <a href="https://github.com/jsliang/pelican-fresh/graphs/contributors">contributors</a>.
+                        Special thanks to <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a> and <a href="http://getbootstrap.com/">Twitter Bootstrap</a>.
+                    </p>
+                </address>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-42971359-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/2.3.2/js/bootstrap.min.js"></script>
+</body>
+</html>

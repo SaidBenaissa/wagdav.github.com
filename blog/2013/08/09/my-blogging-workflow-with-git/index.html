@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="author" content="Dávid" />
+    <meta name="robots" content="index, follow"/>
+
+    <meta property="og:title" content="My blogging workflow with git"/>
+    <meta property="og:url" content="http://thewagner.net/blog/2013/08/09/my-blogging-workflow-with-git/"/>
+    <meta property="og:site_name" content="The Wagner"/>
+    <meta property="og:type" content="article"/>
+
+    <link rel="canonical" href="http://thewagner.net/blog/2013/08/09/my-blogging-workflow-with-git/" />
+
+    <title>My blogging workflow with git | The Wagner</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" />
+    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" />
+
+    <link rel="stylesheet" type="text/css" href="http://thewagner.net/theme/css/main.css" />
+        <link href="http://thewagner.net/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="The Wagner Atom Feed" />
+        
+    <script type="text/javascript">var switchTo5x=true;</script>
+    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+    <script type="text/javascript">
+        stLight.options({
+            publisher: "",
+            doNotHash: false,
+            doNotCopy: false,
+            hashAddressBar: false
+        });
+    </script>
+</head>
+
+<body id="index">
+    <div class="row-fluid">
+        <div class="span10 offset1">
+            <header id="banner" >
+                <h1>
+                    <a href="http://thewagner.net/">The Wagner </a>
+                </h1>
+                <nav class="navbar">
+                    <div class="navbar-inner">
+                        <ul class="nav">
+                                                    <li ><a href="/archives.html">archives</a></li>
+                                                                                                    <li ><a href="http://thewagner.net/pages/about.html">About</a></li>
+                                                                                                                            <li ><a href="http://thewagner.net/category/blog.html">blog</a></li>
+                                                    <li class="active"><a href="http://thewagner.net/category/tech.html">tech</a></li>
+                                                                        </ul>
+
+                                            </div>
+                </nav>
+            </header><!-- /#banner -->
+        </div>
+    </div>
+
+    <div class="row-fluid">
+        <div class="span10 offset1">
+            <div class="row-fluid">
+                <div class="span10 offset1">
+  <section>
+    <article>
+      <header>
+        <h1 class="entry-title">
+          <a href="http://thewagner.net/blog/2013/08/09/my-blogging-workflow-with-git/" rel="bookmark"
+             title="Permalink to My blogging workflow with git">My blogging workflow with git</a></h1>
+              </header>
+      <div class="entry-content">
+        <footer class="post-info">
+        <address class="vcard author">
+        by <a class="url fn" href="http://thewagner.net/author/david.html">Dávid</a>
+    </address>
+    
+    in <a href="http://thewagner.net/category/tech.html">tech</a>
+
+    on 2013-08-09
+
+    
+    
+    
+        
+</footer><!-- /.post-info -->
+        
+        <p>This is a description of my <a class="reference external" href="http://git-scm.org">git</a> workflow for writing blog posts.  I will use this very post as an example and explain in detail how it was made.</p>
+<div class="section" id="start-a-new-topical-branch">
+<h2>Start a new topical branch</h2>
+<p>I create a topical branch named <tt class="docutils literal">workflow</tt> (because I'm working on a post about my workflow) from the <tt class="docutils literal">master</tt> branch</p>
+<div class="highlight"><pre><span class="nv">$ </span>git checkout -b workflow
+</pre></div>
+<p>I edit the file <tt class="docutils literal"><span class="pre">content/tech/2013-08-09-Git-workflow.rst</span></tt> and start writing the post.  When I have enough typing for the day I commit the changes:</p>
+<div class="highlight"><pre><span class="nv">$ </span>git add content/tech/2013-08-09-Git-workflow.rst
+<span class="nv">$ </span>git commit -m <span class="s1">&#39;Add post: Git workflow.&#39;</span>
+</pre></div>
+<p>It rarely happens that I finish a post in one go.  When I feel like writing more I make some modifications (still on the <tt class="docutils literal">workflow</tt> branch) and commit them:</p>
+<div class="highlight"><pre><span class="nv">$ </span>git commit -a -m <span class="s1">&#39;Continue workflow post.&#39;</span>
+</pre></div>
+<p>It typically takes two or three iterations, adding parts, fixing typos, etc. until the post is finished.  In the end the topical branch contains quite a few commits since it was forked off from <tt class="docutils literal">master</tt>:</p>
+<div class="highlight"><pre><span class="nv">$ </span>git log master..
+<span class="o">[</span>there may be some more commits here<span class="o">]</span>
+
+commit 4f721af41b2c0d52a8456bb6735ad0f56754ea98
+Author: David Wagner
+Date:   Fri Aug <span class="m">9</span> 10:44:58 <span class="m">2013</span> +0200
+
+    git log output.
+
+commit f77de095d0d5225a566782c52133be7f65166016
+Author: David Wagner
+Date:   Fri Aug <span class="m">9</span> 10:44:30 <span class="m">2013</span> +0200
+
+    Add summary.
+
+commit e332a4b53c8cdd94f3117a949a99367b56a8bc6e
+Author: David Wagner
+Date:   Fri Aug <span class="m">9</span> 10:39:38 <span class="m">2013</span> +0200
+
+    Add post: Git workflow.
+</pre></div>
+</div>
+<div class="section" id="rebase-on-master-and-squash-commits">
+<h2>Rebase on master and squash commits</h2>
+<p>I want to &quot;compress&quot; all these into one single commit, since there's no point having commits in the <tt class="docutils literal">master</tt> branch with messages such as &quot;Add summary&quot;, &quot;Fix typo.&quot;, &quot;Continue this and that.&quot;.  In git's words this is called interactive rebasing.</p>
+<div class="highlight"><pre><span class="nv">$ </span>git rebase -i master
+</pre></div>
+<p>This pops up <tt class="docutils literal">$EDITOR</tt> with a file to edit the rebase plan:</p>
+<div class="highlight"><pre>pick e332a4b Add post: Git workflow.
+pick f77de09 Add summary.
+pick 4f721af git log output.
+
+<span class="c"># Rebase 6ed71cf..9be73d2 onto 6ed71cf</span>
+<span class="c">#</span>
+<span class="c"># Commands:</span>
+<span class="c">#  p, pick = use commit</span>
+<span class="c">#  r, reword = use commit, but edit the commit message</span>
+<span class="c">#  e, edit = use commit, but stop for amending</span>
+<span class="c">#  s, squash = use commit, but meld into previous commit</span>
+<span class="c">#  f, fixup = like &quot;squash&quot;, but discard this commit&#39;s log message</span>
+<span class="c">#  x, exec = run command (the rest of the line) using shell</span>
+<span class="c">#</span>
+<span class="c"># These lines can be re-ordered; they are executed from top to bottom.</span>
+<span class="c">#</span>
+<span class="c"># If you remove a line here THAT COMMIT WILL BE LOST.</span>
+<span class="c"># However, if you remove everything, the rebase will be aborted.</span>
+<span class="c">#</span>
+</pre></div>
+<p>The comments explain very clearly what I need to do: I modify the file to contain the following (omitting the comments):</p>
+<pre class="literal-block">
+pick e332a4b Add post: Git workflow.
+squash f77de09 Add summary.
+squash 4f721af git log output.
+</pre>
+<p>When the file is saved, I exit from the editor.  Git starts the rebase offering to edit the commit message for each posts to remain, then finally reporting:</p>
+<pre class="literal-block">
+[...]
+Successfully rebased and updated refs/heads/workflow.
+</pre>
+</div>
+<div class="section" id="merge-into-master-and-publish">
+<h2>Merge into master and publish</h2>
+<p>Now I switch back to <tt class="docutils literal">master</tt> and merge, then delete the topical branch:</p>
+<div class="highlight"><pre><span class="nv">$ </span>git checkout master
+<span class="nv">$ </span>git merge workflow
+<span class="nv">$ </span>git branch -d workflow
+</pre></div>
+<p>The new post is ready, the blog can be regenerated and published.</p>
+</div>
+<div class="section" id="summary">
+<h2>Summary</h2>
+<p>In short, I'm quite pleased with this setup.  Using the combination of git and the <a class="reference external" href="http://docs.getpelican.com">Pelican</a> static blog generator is really easy and has a lot of advantages: I can work on multiple posts at the same time, even offline and publishing is just a matter of a <tt class="docutils literal">git push</tt>.  The above workflow rose naturally, when I became to know enough about git's branches and rebasing.</p>
+<p>Evidently this whole thing may appear way more complicated than necessary for the faint hearted on Blogger, however this branch juggling turns out to be quite powerful when it's about software development in the wild where clean commits and keeping track of changes you make on the codebase are essential.</p>
+</div>
+
+
+              </div><!-- /.entry-content -->
+      
+    </article>
+  </section>
+</div>
+                            </div>
+        </div>
+    </div>
+
+    <footer id="site-footer">
+        <div class="row-fluid">
+            <div class="span10 offset1">
+                <address>
+                    <p>
+                        This blog is proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                    </p>
+                    <p>
+                        <a href="http://github.com/jsliang/pelican-fresh/">Fresh</a> is a responsive theme designed by <a href="http://jsliang.com/">jsliang</a> and <a href="https://github.com/jsliang/pelican-fresh/graphs/contributors">contributors</a>.
+                        Special thanks to <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a> and <a href="http://getbootstrap.com/">Twitter Bootstrap</a>.
+                    </p>
+                </address>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-42971359-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/2.3.2/js/bootstrap.min.js"></script>
+</body>
+</html>

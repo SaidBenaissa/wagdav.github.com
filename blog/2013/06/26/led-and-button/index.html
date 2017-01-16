@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="author" content="Dávid" />
+    <meta name="robots" content="index, follow"/>
+
+    <meta property="og:title" content="Led and button"/>
+    <meta property="og:url" content="http://thewagner.net/blog/2013/06/26/led-and-button/"/>
+    <meta property="og:site_name" content="The Wagner"/>
+    <meta property="og:type" content="article"/>
+
+    <link rel="canonical" href="http://thewagner.net/blog/2013/06/26/led-and-button/" />
+
+    <title>Led and button | The Wagner</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" />
+    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" />
+
+    <link rel="stylesheet" type="text/css" href="http://thewagner.net/theme/css/main.css" />
+        <link href="http://thewagner.net/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="The Wagner Atom Feed" />
+        
+    <script type="text/javascript">var switchTo5x=true;</script>
+    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+    <script type="text/javascript">
+        stLight.options({
+            publisher: "",
+            doNotHash: false,
+            doNotCopy: false,
+            hashAddressBar: false
+        });
+    </script>
+</head>
+
+<body id="index">
+    <div class="row-fluid">
+        <div class="span10 offset1">
+            <header id="banner" >
+                <h1>
+                    <a href="http://thewagner.net/">The Wagner </a>
+                </h1>
+                <nav class="navbar">
+                    <div class="navbar-inner">
+                        <ul class="nav">
+                                                    <li ><a href="/archives.html">archives</a></li>
+                                                                                                    <li ><a href="http://thewagner.net/pages/about.html">About</a></li>
+                                                                                                                            <li ><a href="http://thewagner.net/category/blog.html">blog</a></li>
+                                                    <li class="active"><a href="http://thewagner.net/category/tech.html">tech</a></li>
+                                                                        </ul>
+
+                                            </div>
+                </nav>
+            </header><!-- /#banner -->
+        </div>
+    </div>
+
+    <div class="row-fluid">
+        <div class="span10 offset1">
+            <div class="row-fluid">
+                <div class="span10 offset1">
+  <section>
+    <article>
+      <header>
+        <h1 class="entry-title">
+          <a href="http://thewagner.net/blog/2013/06/26/led-and-button/" rel="bookmark"
+             title="Permalink to Led and button">Led and button</a></h1>
+              </header>
+      <div class="entry-content">
+        <footer class="post-info">
+        <address class="vcard author">
+        by <a class="url fn" href="http://thewagner.net/author/david.html">Dávid</a>
+    </address>
+    
+    in <a href="http://thewagner.net/category/tech.html">tech</a>
+
+    on 2013-06-26
+
+            |
+        tags:         <a href="http://thewagner.net/tag/raspberrypi.html">raspberrypi</a>
+            
+    
+    
+        
+</footer><!-- /.post-info -->
+        
+        <p>I finally got around to tinkering with the Raspberry Pi hardware.  A while
+ago I'd ordered a basic electronic kit from ebay with a breadboard and a
+bunch of electronic components (resistors, cables, etc) in it.  I started
+with a rather elementary project: control of an LED and a push-button from
+the Pi.  Despite its apparent simplicity it's a good opportunity re-learn
+some basics: which is the anode/cathode of the LED?  What's a
+pull-up/pull-down resistor? and so on...</p>
+<p>Here's the final 'product':</p>
+<img alt="|filename|/images/pi/photo_led_button_1.jpg" src="http://thewagner.net/static/images/pi/photo_led_button_1.jpg" style="width: 49%;" />
+<img alt="|filename|/images/pi/photo_led_button_2.jpg" src="http://thewagner.net/static/images/pi/photo_led_button_2.jpg" style="width: 49%;" />
+<p>I needed to cut open up my fancy <a class="reference external" href="http://thewagner.net/blog/2013/03/17/cardboard-raspberry-pi-case/">cardboard case</a> :-( to gain access to the
+GPIO ports on the Pi.  I may design a new case in the futre, one that allows
+direct connection to the board.</p>
+<p>I drew the circuit diagram using the <a class="reference external" href="http://www.mbeckler.org/inkscape/circuit_symbols/">circuit symbol set</a> for <a class="reference external" href="http://inkscape.org">Inkscape</a>.</p>
+<img alt="|filename|/images/pi/schematic_led_button.png" src="http://thewagner.net/static/images/pi/schematic_led_button.png" style="width: 98%;" />
+<p>The drive this wonderful piece of hardware, I wrote the following code that
+makes the LED blinking (yaaaay):</p>
+<div class="highlight"><pre><span class="c"># led_blink.py</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">RPi.GPIO</span> <span class="kn">as</span> <span class="nn">GPIO</span>
+
+<span class="c"># Set the mode of numbering the pins.</span>
+<span class="n">GPIO</span><span class="o">.</span><span class="n">setmode</span><span class="p">(</span><span class="n">GPIO</span><span class="o">.</span><span class="n">BOARD</span><span class="p">)</span>
+<span class="n">GPIO</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="n">GPIO</span><span class="o">.</span><span class="n">OUT</span><span class="p">)</span>
+
+<span class="c"># Initialise GPIO10 to high (true) so that the LED is off.</span>
+<span class="n">status</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="k">while</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">GPIO</span><span class="o">.</span><span class="n">output</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="n">status</span><span class="p">)</span>
+        <span class="n">status</span> <span class="o">=</span> <span class="ow">not</span> <span class="n">status</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+<p>and this program turns the LED on when the button is pressed:</p>
+<div class="highlight"><pre><span class="c"># led_button.py</span>
+<span class="kn">import</span> <span class="nn">RPi.GPIO</span> <span class="kn">as</span> <span class="nn">GPIO</span>
+
+<span class="c"># Set the mode of numbering the pins.</span>
+<span class="n">GPIO</span><span class="o">.</span><span class="n">setmode</span><span class="p">(</span><span class="n">GPIO</span><span class="o">.</span><span class="n">BOARD</span><span class="p">)</span>
+<span class="n">GPIO</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="n">GPIO</span><span class="o">.</span><span class="n">IN</span><span class="p">)</span>
+<span class="n">GPIO</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="n">GPIO</span><span class="o">.</span><span class="n">OUT</span><span class="p">)</span>
+
+<span class="c"># Initialise to high (true) so that the LED is off.</span>
+<span class="n">GPIO</span><span class="o">.</span><span class="n">output</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="bp">True</span><span class="p">)</span>
+
+<span class="n">button_pressed</span> <span class="o">=</span> <span class="bp">False</span>
+<span class="k">while</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">GPIO</span><span class="o">.</span><span class="n">input</span><span class="p">(</span><span class="mi">11</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">button_pressed</span><span class="p">:</span>
+                <span class="k">print</span> <span class="s">&#39;Button pressed.&#39;</span>
+                <span class="n">button_pressed</span> <span class="o">=</span> <span class="bp">True</span>
+        <span class="n">GPIO</span><span class="o">.</span><span class="n">output</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="bp">False</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">button_pressed</span><span class="p">:</span>
+                <span class="k">print</span> <span class="s">&#39;Button released.&#39;</span>
+                <span class="n">button_pressed</span> <span class="o">=</span> <span class="bp">False</span>
+        <span class="c"># When the button switch is not pressed, turn off the LED.</span>
+        <span class="n">GPIO</span><span class="o">.</span><span class="n">output</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="bp">True</span><span class="p">)</span>
+</pre></div>
+<p>I took the inspiration and some sample code from the following places:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://visualgdb.com/tutorials/raspberry/LED/">http://visualgdb.com/tutorials/raspberry/LED/</a></li>
+<li><a class="reference external" href="http://www.cl.cam.ac.uk/projects/raspberrypi/tutorials/turing-machine/two.html">http://www.cl.cam.ac.uk/projects/raspberrypi/tutorials/turing-machine/two.html</a></li>
+</ul>
+
+
+              </div><!-- /.entry-content -->
+      
+    </article>
+  </section>
+</div>
+                            </div>
+        </div>
+    </div>
+
+    <footer id="site-footer">
+        <div class="row-fluid">
+            <div class="span10 offset1">
+                <address>
+                    <p>
+                        This blog is proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                    </p>
+                    <p>
+                        <a href="http://github.com/jsliang/pelican-fresh/">Fresh</a> is a responsive theme designed by <a href="http://jsliang.com/">jsliang</a> and <a href="https://github.com/jsliang/pelican-fresh/graphs/contributors">contributors</a>.
+                        Special thanks to <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a> and <a href="http://getbootstrap.com/">Twitter Bootstrap</a>.
+                    </p>
+                </address>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-42971359-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/2.3.2/js/bootstrap.min.js"></script>
+</body>
+</html>
